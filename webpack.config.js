@@ -27,8 +27,6 @@ module.exports = {
       PhotoAlbums:'app/components/PhotoAlbums.jsx',
       Nav: 'app/components/Nav.jsx',
       Login:'app/components/Login.jsx',
-      LoginForm: 'app/components/LoginForm.jsx',
-      WeatherMessage: 'app/components/WeatherMessage.jsx',
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
       Jsonplaceholder: 'app/api/Jsonplaceholder.jsx',

@@ -1,6 +1,4 @@
 var React = require('react');
-var LoginForm = require('LoginForm');
-var WeatherMessage = require('WeatherMessage');
 var Jsonplaceholder = require('Jsonplaceholder');
 
 var Login = React.createClass({
