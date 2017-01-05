@@ -37,12 +37,30 @@ var Weather = React.createClass({
   },
   render: function () {
     return (
-        <div>
+        <div className="loginform">
           <form onSubmit={this.onFormSubmit}>
-          <h2> Enter User name</h2>
-            <input type="text" ref="username"/>
-            <input type="text" ref="password" />
-            <button>Login </button>
+          <div className="row">
+           <div className="small-3 columns">
+          <h3> User Login </h3>
+          </div>
+          </div>
+          <div className="row">
+           <div className="small-3 columns">
+         
+            <input type="text" ref="username" placeholder="User Name (required )"/>
+            </div>
+          </div>
+            <div className="row">
+              <div className="small-3 columns">
+
+            <input type="text" ref="password" placeholder="password (optional )"/>
+            </div>
+            </div>
+            <div className="row">
+               <div className="small-3 columns">
+            <button className="button">Login </button>
+            </div>
+            </div>
           </form>
         </div>
     );
