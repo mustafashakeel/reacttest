@@ -1,7 +1,7 @@
 var React = require('react');
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
-var openWeatherMap = require('openWeatherMap');
+var Jsonplaceholder = require('Jsonplaceholder');
 
 var Weather = React.createClass({
   getInitialState: function () {
@@ -13,10 +13,10 @@ var Weather = React.createClass({
     var that = this;
 
     this.setState({isLoading: true});
-    openWeatherMap.getTest().then(function(temp){
+    Jsonplaceholder.getTest().then(function(temp){
       console.log("Weather temp:",temp);
     });
-    openWeatherMap.getTemp(location).then(function (temp) {
+    Jsonplaceholder.getTemp(location).then(function (temp) {
       that.setState({
         location: location,
         temp: temp,
