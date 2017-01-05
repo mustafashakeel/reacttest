@@ -1,5 +1,6 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
+var Jsonplaceholder = require('Jsonplaceholder');
 
 var Nav = React.createClass({
   onSearch: function (e) {
@@ -14,33 +15,29 @@ var Nav = React.createClass({
       }
   },
   render: function () {
+
+    var username = sessionStorage.getItem('username');
+    var email = sessionStorage.getItem('email');
+    var loginmessage = 'Logged in as '+username+ ' ( '+ email+ ' )';
+
+    console.log("The username",username);
+        console.log("The Email",email);
     return (
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
-            <li className="menu-text">React Weather App</li>
             <li>
-              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
+              <IndexLink to="/posts" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>Posts1 </IndexLink>
             </li>
             <li>
-              <Link to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>About</Link>
+              <Link to="/photoalbums" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Photo Albums</Link>
             </li>
-            <li>
-              <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
-            </li>
+            
+
           </ul>
         </div>
         <div className="top-bar-right">
-          <form onSubmit={this.onSearch}>
-            <ul className="menu">
-              <li>
-                <input type="search" placeholder="Search weather by city" ref="search"/>
-              </li>
-              <li>
-                <input type="submit" className="button" value="Get Weather"/>
-              </li>
-            </ul>
-          </form>
+          <span className="login-status">{loginmessage}</span>
         </div>
       </div>
     );

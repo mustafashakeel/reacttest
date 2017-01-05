@@ -5,6 +5,8 @@ var Main = require('Main');
 var Login = require('Login');
 var About = require('About');
 var Examples = require('Examples');
+var Posts = require('Posts');
+var PhotoAlbums = require('PhotoAlbums');
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -21,8 +23,8 @@ if (username){
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-      <Route path="about" component={About}/>
-      <Route path="examples" component={Examples}/>
+      <Route path="posts" component={Posts}/>
+      <Route path="photoalbums" component={PhotoAlbums}/>
     
     </Route>
   </Router>,
