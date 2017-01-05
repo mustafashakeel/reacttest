@@ -20,8 +20,7 @@ var Nav = React.createClass({
     var email = sessionStorage.getItem('email');
     var loginmessage = 'Logged in as '+username+ ' ( '+ email+ ' )';
 
-    console.log("The username",username);
-        console.log("The Email",email);
+   
     return (
       <div className="top-bar">
         <div className="top-bar-left">

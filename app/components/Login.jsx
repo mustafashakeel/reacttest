@@ -3,7 +3,7 @@ var LoginForm = require('LoginForm');
 var WeatherMessage = require('WeatherMessage');
 var Jsonplaceholder = require('Jsonplaceholder');
 
-var Weather = React.createClass({
+var Login = React.createClass({
   getInitialState: function () {
     return {
       isLoading: false,
@@ -18,13 +18,12 @@ var Weather = React.createClass({
     if (username.length > 0) {
       this.refs.username.value = '';
       Jsonplaceholder.getUsers().then(function(temp){
-        console.log("user entered ",username);
+ 
     
         temp.forEach(function(val){
 
           if (username === val.username){
-            console.log("Match");
-            console.log('val',val);
+            
             sessionStorage.setItem('username', val.username);
             sessionStorage.setItem('email',val.email);
             window.location.reload();
@@ -68,4 +67,4 @@ var Weather = React.createClass({
 
 });
 
-module.exports = Weather;
+module.exports = Login;

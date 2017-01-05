@@ -18,14 +18,21 @@ module.exports = {
   getUsers:function(){
         var root = 'https://jsonplaceholder.typicode.com/users';
         return axios.get(root).then(function (res) {
-      //    console.log("Dataaaa",res.data);
             return res.data;
 
         }, function (res) {
           throw new Error("Erro r", res);
         });
 
+  },
+  getPosts: function(){
+            var root = 'https://jsonplaceholder.typicode.com/posts';
+            return axios.get(root).then(function (res) {
+            return res.data;
 
+        }, function (res) {
+          throw new Error("Erro r", res);
+        });
 
 
   },

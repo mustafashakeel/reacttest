@@ -17,7 +17,7 @@ require('style!css!sass!applicationStyles')
 
 
 var username = sessionStorage.getItem('username') || false;
-console.log('session username', username);
+// console.log('session username', username);
 // var username = false;
 if (username){
 ReactDOM.render(
