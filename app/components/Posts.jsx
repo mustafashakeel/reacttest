@@ -2,9 +2,17 @@ var React = require('react');
 var Jsonplaceholder = require('Jsonplaceholder');
 
 var Posts = React.createClass({
-	getPostsNow:function(){
+	 getInitialState: function() {
+    return {
+      posts: ""
+    };
+  },componentDidMount: function () {
+  		var that = this;
+	
+
 		var html = '';
-		Jsonplaceholder.getPosts().then(function(temp){
+	var postit = Jsonplaceholder.getPosts().then(function(temp){
+	
 
         for (var i = 0; i < 10 ; i++){
          
@@ -15,18 +23,19 @@ var Posts = React.createClass({
 		   '</div></div></div></div>';
 
           }
-  
-		sessionStorage.setItem('html',html);
-      });
-	},
-  render: function () {
-	var posts = this.getPostsNow();
 
-	var posttitle = sessionStorage.getItem('html') || "";
-	
+		that.setState({posts:html});
+      });
+
+  },
+
+  render: function () {
+
+  	var postit = this.state.posts;
+  	
     return (
     	<div style={{padding:'30px'}}>
-			<div dangerouslySetInnerHTML={{__html: posttitle}} >
+			<div dangerouslySetInnerHTML={{__html: this.state.posts}} >
 			</div>
 		</div>
     );

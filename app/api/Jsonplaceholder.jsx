@@ -23,6 +23,16 @@ module.exports = {
         });
 
   },
+  getPhotos:function(){
+            var root = 'https://jsonplaceholder.typicode.com/photos';
+        return axios.get(root).then(function (res) {
+            return res.data;
+
+        }, function (res) {
+          throw new Error("Erro r", res);
+        });
+
+  },
   getPosts: function(){
             var root = 'https://jsonplaceholder.typicode.com/posts';
             return axios.get(root).then(function (res) {
