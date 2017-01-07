@@ -24,6 +24,7 @@ var Login = React.createClass({
             
             sessionStorage.setItem('username', val.username);
             sessionStorage.setItem('email',val.email);
+            sessionStorage.setItem('id',val.id);
             window.location.reload();
           }else{
             console.log("not a match");

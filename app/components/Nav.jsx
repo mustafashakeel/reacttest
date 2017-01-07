@@ -26,11 +26,12 @@ var Nav = React.createClass({
         <div className="top-bar-left">
           <ul className="menu tabs" data-tab >
             <li className="tab-name">
-              <IndexLink to="/posts" activeClassName="active"  role="tab" activeStyle={{fontWeight: 'bold'}}>Posts1 </IndexLink>
+              <IndexLink to="/" activeClassName="active"  role="tab" activeStyle={{fontWeight: 'bold'}}>Posts </IndexLink>
             </li>
             <li className="tab-name">
               <Link to="/photoalbums" activeClassName="active" role="tab" activeStyle={{fontWeight: 'bold'}}>Photo Albums</Link>
             </li>
+                   
             
 
           </ul>

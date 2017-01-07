@@ -25,12 +25,14 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Posts:'app/components/Posts.jsx',
       PhotoAlbums:'app/components/PhotoAlbums.jsx',
+      PhotoAlbumsNav: 'app/components/PhotoAlbumsNav.jsx',
       Nav: 'app/components/Nav.jsx',
       Login:'app/components/Login.jsx',
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
       Jsonplaceholder: 'app/api/Jsonplaceholder.jsx',
       applicationStyles: 'app/styles/app.scss'
+
 
     },
     extensions: ['', '.js', '.jsx']

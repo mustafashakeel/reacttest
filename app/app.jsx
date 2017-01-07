@@ -1,12 +1,12 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('Main');
-var Login = require('Login');
-var About = require('About');
-var Examples = require('Examples');
+ var ReactDOM = require('react-dom');
+  var {Route,Router, IndexRoute, hashHistory} = require('react-router');
+ var Main = require('Main'); 
+ var Login = require('Login'); 
 var Posts = require('Posts');
 var PhotoAlbums = require('PhotoAlbums');
+var About = require('About');
+var Examples = require('Examples');
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -23,9 +23,12 @@ if (username){
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-      <Route path="posts" component={Posts}/>
-      <Route path="photoalbums" component={PhotoAlbums}/>
-    
+      <IndexRoute  component={Posts}/>
+      <Route path="photoalbums" component={PhotoAlbums}>
+      	<IndexRoute  component={About} />
+      	<Route path="examples" component={Examples} />
+      </Route>
+      
     </Route>
   </Router>,
   document.getElementById('app')
