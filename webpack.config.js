@@ -26,6 +26,7 @@ module.exports = {
       Posts:'app/components/Posts.jsx',
       PhotoAlbums:'app/components/PhotoAlbums.jsx',
       PhotoAlbumsNav: 'app/components/PhotoAlbumsNav.jsx',
+      AlbumsList: 'app/components/AlbumsList.jsx',
       Nav: 'app/components/Nav.jsx',
       Login:'app/components/Login.jsx',
       About: 'app/components/About.jsx',

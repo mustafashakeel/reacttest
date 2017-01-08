@@ -23,6 +23,7 @@ var Login = React.createClass({
           if (username === val.username){
             
             sessionStorage.setItem('username', val.username);
+            sessionStorage.setItem('name', val.name);
             sessionStorage.setItem('email',val.email);
             sessionStorage.setItem('id',val.id);
             window.location.reload();

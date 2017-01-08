@@ -16,9 +16,9 @@ var Nav = React.createClass({
   },
   render: function () {
 
-    var username = sessionStorage.getItem('username');
+    var name = sessionStorage.getItem('name');
     var email = sessionStorage.getItem('email');
-    var loginmessage = 'Logged in as '+username+ ' ( '+ email+ ' )';
+    var loginmessage = 'Logged in as '+name+ ' ( '+ email+ ' )';
 
    
     return (

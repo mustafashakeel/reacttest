@@ -24,10 +24,8 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute  component={Posts}/>
-      <Route path="photoalbums" component={PhotoAlbums}>
-      	<IndexRoute  component={About} />
-      	<Route path="examples" component={Examples} />
-      </Route>
+      <Route path="photoalbums" component={PhotoAlbums} />
+	      
       
     </Route>
   </Router>,

@@ -1,15 +1,43 @@
 var React = require('react');
 var PhotoAlbumsNav = require('PhotoAlbumsNav');
+var AlbumsList = require('AlbumsList');
 
 var PhotoAlbums = React.createClass({
+	getInitialState:function(){
+		return {
+			userid:1
+		}
+	},
+	handleUserLinks:function(e){
+		e.preventDefault();
+		// console.log(" Awesome ",e.target); 	
+		var link = e.target;
+		var href = link.getAttribute('href');
+		var userid = href.substr(1);
+		// console.log("href",userid);
+		this.setState({userid:userid});
+
+
+	},
   render: function () {
+  	var userid = this.state.userid;
+  	// console.log("userid",userid);
      return (
       <div>
-        <PhotoAlbumsNav />
-        {this.props.children}
+        <PhotoAlbumsNav getLink={this.handleUserLinks} />
+       <AlbumsList userid={userid}/>
       </div>
     );
   }
+
+  // render: function () {
+  //    return (
+  //     <div>
+  //       <PhotoAlbumsNav />
+  //       {this.props.children}
+  //     </div>
+  //   );
+  // }
 });
 
 module.exports = PhotoAlbums;
